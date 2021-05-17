@@ -6,7 +6,7 @@
 У вас {{apples.value|numword:'яблоко':'яблока':'яблок'}}
 apples должен быть ссылкой на элемент шаблона, а не свойством компонента.*/
 
-import { Component, NgModule} from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
