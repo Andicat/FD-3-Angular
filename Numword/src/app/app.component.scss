@@ -1,0 +1,12 @@
+.Numword {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        margin-top: 5px;
+    }
+}
