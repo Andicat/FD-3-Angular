@@ -1,0 +1,39 @@
+.cash {
+    max-width: 200px;
+    min-height: 100px;
+    padding: 5px;
+    margin: 0 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+
+    h2 {
+        width: 100%;
+        position: relative;
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+    }
+
+    span {
+        width: 100%;
+        text-align: center;
+    }
+
+    input {
+        box-sizing: border-box;
+        width: 40px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    button {
+        box-sizing: border-box;
+        margin: 5px;
+        height: 20px;
+    }
+
+}

@@ -1,6 +1,6 @@
 <div class='Numword'>
   <form #frm="ngForm">
     Введите число: <input name=count type=text ngModel='0' #apples required pattern="^$|^([0-9]|[1-9][0-9]|[1][0][0])?"><br>
-    <span>{{frm.valid?('У вас ' + apples.value|numword:'яблоко':'яблока':'яблок'):'Введите число от 0 до 100'}}</span>
+    <span>{{frm.valid?('У вас ' + (apples.value|numword:'яблоко':'яблока':'яблок')):'Введите число от 0 до 100'}}</span>
   </form>
 </div>

@@ -1,0 +1,42 @@
+:host {
+    display: flex;
+}
+.hall {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+
+    &-screen {
+        width: 500px;
+        height: 5px;
+        margin-bottom: 50px;
+        background-color: slategray;
+        border-radius: 0 0 20px 20px;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+    }
+
+    &-seats {
+        display: flex;
+    }
+
+    &-seat {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid gray;
+        margin: 5px;
+
+        &--reserved {
+            background-color: tomato;
+        }
+    }
+}

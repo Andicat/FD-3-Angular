@@ -1,0 +1,17 @@
+.cinema {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+.cashes {
+    display: flex;
+    justify-content: center;
+}
