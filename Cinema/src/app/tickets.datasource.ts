@@ -3,35 +3,16 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class TicketsService {
 
+  private ticketsArr:Array<{num:number,isAvailable:boolean}>=[];
+  private freeTicketRanges:Array<any>=[];
+  private ticketsCount:number = 20;
+
   constructor() {
+    for (let i=1; i<=this.ticketsCount; i++) {
+      this.ticketsArr.push({ num:i, isAvailable:true });
+    }
     this.findFreeRanges();
   }
-
-  private ticketsArr:Array<{num:number,isAvailable:boolean}>=[
-    { num:1, isAvailable:true },
-    { num:2, isAvailable:true },
-    { num:3, isAvailable:true },
-    { num:4, isAvailable:true },
-    { num:5, isAvailable:true },
-    { num:6, isAvailable:true },
-    { num:7, isAvailable:true },
-    { num:8, isAvailable:true },
-    { num:9, isAvailable:true },
-    { num:10, isAvailable:true },
-    { num:11, isAvailable:true },
-    { num:12, isAvailable:true },
-    { num:13, isAvailable:true },
-    { num:14, isAvailable:true },
-    { num:15, isAvailable:true },
-    { num:16, isAvailable:true },
-    { num:17, isAvailable:true },
-    { num:18, isAvailable:true },
-    { num:19, isAvailable:true },
-    { num:20, isAvailable:true },
-
-  ];
-
-  private freeTicketRanges:Array<any>=[];
 
   getTickets():Array<{num:number,isAvailable:boolean}> {
     return this.ticketsArr;

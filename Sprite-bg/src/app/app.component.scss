@@ -1,0 +1,26 @@
+div.Sprite {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        text-align: center;
+    }
+}
+
+div.Smile {
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+}
+  
