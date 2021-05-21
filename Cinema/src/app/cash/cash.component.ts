@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TicketsService } from '../tickets.datasource';
+import { TicketsService } from '../tickets.service';
 
 @Component({
   selector: 'cash',
@@ -15,6 +15,7 @@ export class CashComponent {
   @Input("cash-name")
   public name!: string;
 
+  
   getName():string {
     return this.name;
   };

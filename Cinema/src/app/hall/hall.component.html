@@ -1,8 +1,7 @@
 <div class='hall'>
     <div class="hall-screen"></div>
         <div class="hall-seats">
-            <div class="hall-seat" [ngClass]="!ticket.isAvailable?'hall-seat--reserved':''" *ngFor="let ticket of getTickets()">{{ticket.num}}
+            <div class="hall-seat" [ngClass]="!ticket?'hall-seat--reserved':''" *ngFor="let ticket of tickets; let i = index">{{i+1}}</div>
         </div>
-    </div>
     <span>{{getTicketsInfo()}}</span>
 </div>

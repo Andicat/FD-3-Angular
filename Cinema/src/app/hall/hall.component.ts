@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TicketsService } from '../tickets.datasource';
+import { Component} from '@angular/core';
+import { TicketsService } from '../tickets.service';
 
 @Component({
   selector: 'hall',
@@ -8,15 +8,15 @@ import { TicketsService } from '../tickets.datasource';
 })
 export class HallComponent {
 
-  constructor(private tickets:TicketsService) { }
-
-  getTickets():Array<{num:number,isAvailable:boolean}> {
-    return this.tickets.getTickets();
-  };
+  public tickets:Array<boolean> = [];
+  
+  constructor(ticketsService:TicketsService) {
+    ticketsService.getTickets().subscribe((_tickets:Array<boolean>) => { this.tickets = _tickets; });
+  }
 
   getTicketsInfo():string {
-    let count:number = this.tickets.getAllCount();
-    let availableCount:number = this.tickets.getAvailableCount();
+    let count:number = this.tickets.length;
+    let availableCount:number = this.tickets.filter(t => true).length;
     return 'Tickets count: ' + count + ' (available: ' + availableCount + ')';
   };
 

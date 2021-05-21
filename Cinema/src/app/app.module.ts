@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CinemaComponent } from './cinema.component';
 import { HallComponent } from './hall/hall.component';
 import { CashComponent } from './cash/cash.component';
-import { TicketsService } from './tickets.datasource';
+import { TicketsService } from './tickets.service';
 
 @NgModule({
   declarations: [
